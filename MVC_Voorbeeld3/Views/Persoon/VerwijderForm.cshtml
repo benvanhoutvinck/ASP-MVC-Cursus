@@ -1,0 +1,11 @@
+﻿@model MVC_Voorbeeld3.Models.Persoon
+
+@{
+    ViewBag.Title = Model.Voornaam + ' ' + Model.Familienaam + " verwijderen?";
+}
+
+<h2>@Model.Voornaam @Model.Familienaam verwijderen?</h2>
+<form method="post" action='@Url.Action("Verwijderen", new {ID=Model.ID} )'>
+    <input type="submit" value="Verwijderen" />
+</form>
+

@@ -1,0 +1,11 @@
+﻿@helper Milieuscore(DateTime datum)
+{
+    if (datum.Year < 1980)
+    {
+        <span>**</span>
+    }
+    else
+    {
+        <span>***</span>
+    }
+}

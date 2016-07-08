@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "Filialen";
+}
+@model List<MVC_Voorbeeld3.Models.Filiaal>
+<h2>Filialen</h2>
+<ul>
+    @foreach (var filiaal in Model)
+    {
+
+        var url = "Verwijderen/" + filiaal.ID;
+        
+        <li>
+            @filiaal.ID @filiaal.Naam @Html.DisplayFor(m => filiaal.Gebouwd)
+            @Html.DisplayFor(m => filiaal.Waarde) @Html.DisplayFor(m => filiaal.Eigenaar)
+           @Html.ActionLink("Verwijderen", "Verwijderen", new { ID = filiaal.ID })
+        </li>
+    }
+</ul>
+

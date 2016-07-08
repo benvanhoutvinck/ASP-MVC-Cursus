@@ -1,0 +1,16 @@
+﻿
+@model DateTime
+@{int aantal = 0;}
+@if (Model.Year < 1980)
+{
+    aantal = 2;
+}
+else
+{
+    aantal = 3;
+}
+@for (int i = 0; i < aantal; i++)
+{
+    <img alt="ster" src="~/Images/ster.png" />
+}
+
