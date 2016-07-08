@@ -1,0 +1,21 @@
+﻿@model MVC_Voorbeeld3.Models.OpslagForm
+
+@{
+    ViewBag.Title = "Opslag";
+}
+
+<h2>Opslag</h2>
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(m => m.VanWedde)
+    @Html.ValidationMessageFor(m => m.VanWedde)
+    @Html.TextBoxFor(m => m.VanWedde)
+    @Html.LabelFor(m => m.TotWedde)
+    @Html.ValidationMessageFor(m => m.TotWedde)
+    @Html.TextBoxFor(m => m.TotWedde)
+    @Html.LabelFor(m => m.Percentage)
+    @Html.ValidationMessageFor(m => m.Percentage)
+    @Html.TextBoxFor(m => m.Percentage)
+    <input type="submit" value="Weddeverhoging doorvoeren" />
+    @Html.ValidationSummary("Er zijn validatiefouten:")
+}

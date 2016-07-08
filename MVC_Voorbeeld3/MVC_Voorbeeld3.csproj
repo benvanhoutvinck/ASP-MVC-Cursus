@@ -108,12 +108,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_GlobalResources\Messages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Messages.resx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\FiliaalController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PersoonController.cs" />
+    <Compile Include="DecimalModelBinder.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -121,11 +127,14 @@
     <Compile Include="Models\Filiaal.cs" />
     <Compile Include="Models\Geslacht.cs" />
     <Compile Include="Models\HoofdZetel.cs" />
+    <Compile Include="Models\OpslagForm.cs" />
     <Compile Include="Models\Persoon.cs" />
+    <Compile Include="Models\VanTotWeddeForm.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\FiliaalService.cs" />
     <Compile Include="Services\HoofdZetelService.cs" />
     <Compile Include="Services\PersoonService.cs" />
+    <Compile Include="VerledenAttribute.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -149,6 +158,7 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\jqueryFixes.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
@@ -181,6 +191,10 @@
     <Content Include="Views\Filiaal\Verwijderd.cshtml" />
     <Content Include="Views\Persoon\Index.cshtml" />
     <Content Include="Views\Persoon\VerwijderForm.cshtml" />
+    <Content Include="Views\Persoon\Opslag.cshtml" />
+    <Content Include="Views\Persoon\VanTotWedde.cshtml" />
+    <Content Include="Views\Persoon\Toevoegen.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\Geslacht.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -191,6 +205,12 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Messages.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Messages.Designer.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

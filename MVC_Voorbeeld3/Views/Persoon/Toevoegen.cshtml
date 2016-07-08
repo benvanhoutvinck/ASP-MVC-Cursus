@@ -1,0 +1,35 @@
+﻿@model MVC_Voorbeeld3.Models.Persoon
+
+@{
+    ViewBag.Title = "Toevoegen";
+}
+
+<h2>Persoon toevoegen</h2>
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(m => m.Voornaam)
+    @Html.EditorFor(m => m.Voornaam)
+    @Html.LabelFor(m => m.Familienaam)
+    @Html.EditorFor(m => m.Familienaam)
+    @Html.LabelFor(m => m.Score)
+    @Html.EditorFor(m => m.Score)
+    @Html.LabelFor(m => m.Wedde)
+    @Html.EditorFor(m => m.Wedde)
+    @Html.LabelFor(m => m.Paswoord)
+    @Html.EditorFor(m => m.Paswoord)
+    @Html.LabelFor(m => m.HerhaalPaswoord)
+    @Html.EditorFor(m => m.HerhaalPaswoord)
+    @Html.LabelFor(m => m.Geboren)
+    @Html.EditorFor(m => m.Geboren)
+    <div>
+        @Html.EditorFor(m => m.Gehuwd)
+    @Html.LabelFor(m => m.Gehuwd)
+</div>
+    @Html.LabelFor(m => m.Opmerkingen)
+    @Html.EditorFor(m => m.Opmerkingen)
+    @Html.LabelFor(m => m.Geslacht)
+    @Html.EditorFor(m => m.Geslacht)
+    <input type="submit" value="toevoegen" />
+    @Html.ValidationSummary()
+}
+

@@ -1,0 +1,16 @@
+﻿@using MVC_Voorbeeld3.Models
+@model Geslacht
+@Html.DropDownList("",
+new SelectListItem[] {
+    new SelectListItem() {
+        Text="Mannelijk",
+        Value=Geslacht.Man.ToString(),
+        Selected = Model==Geslacht.Man
+},
+new SelectListItem() {
+    Text="Vrouwelijk",
+    Value=Geslacht.Vrouw.ToString(),
+    Selected = Model==Geslacht.Vrouw
+        }
+    }
+)
